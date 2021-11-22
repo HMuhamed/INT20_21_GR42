@@ -155,6 +155,32 @@
         font-size: 18px;
         color:darkblue;
     }
+    .Table{
+    margin-right: 20px;
+    margin-left: auto;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;}
+  
+
+
+.Table td, .Table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.Table tr:nth-child(even){background-color: #f2f2f2;}
+
+.Table tr:hover {background-color: #ddd;}
+
+.Table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: lightgrey;
+  color: white;
+}
     </style>
 </head>
 <body>
@@ -224,7 +250,28 @@
                     </ol>
         </div>
     </div>
-
+    <div>
+    <table class ="Table"  border="1px solid black">
+        <tr>
+            <th>Products</th><th>Prices</th><th>Percentage Change</th><th>Net Change</th>
+        </tr>
+        <tr>
+           <th>Apple</th><th>163.70$</th><th>1.94%</th><th>3.2$</th>
+        </tr>
+        <tr>
+            <th>Amazon</th><th>3610.03$</th><th>-1.82%</th><th>-63.45$</th>
+        </tr>
+        <tr>
+            <th>Tesla</th><th>1184.55$</th><th>4.21%</th><th>43.97$</th>
+        </tr>
+        <tr>
+            <th>Microsoft</th><th>343.42$</th><th>0.14%</th><th>0.31$</th>
+        </tr>
+        <tr>
+            <th>Google</th><th>2968.74$</th><th>-1.01%</th><th>-29.92$</th>
+        </tr>
+    </table>
+    </div>
 
 <!--
     <footer>
