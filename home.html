@@ -155,12 +155,16 @@
         font-size: 18px;
         color:darkblue;
     }
+
+   
     .Table{
     margin-right: 20px;
     margin-left: auto;
     margin-top: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
+    border-spacing: 1px;
+    border-collapse: separate;
     width: 45%;
     }
   
@@ -169,6 +173,7 @@
 .Table td, .Table th {
   border: 1px solid #ddd;
   padding: 8px;
+ 
 }
 
 .Table tr:nth-child(even){background-color: #f2f2f2;}
@@ -190,7 +195,8 @@ float: left;
 <body>
     <div class='navbar'>
         <div class='logo'>
-           <h1 class="title-heading">STOCK MARKET</h1>
+        
+           <h1 class="title-heading">STOCK MARKET</h1> 
 
         </div>
         <div class='icon-bar'>
@@ -255,25 +261,26 @@ float: left;
         </div>
     </div>
     <div>
-        <img class ="image_report" src="photos/Report1.png" alt="Report" width="600" height="300" style ="margin-left: 10px;">
-    <table class ="Table"  border="1px solid black">
+     <!--   <img class ="image_report" src="photos/Report1.png" alt="Report" width="600" height="300" style ="margin-left: 10px;"> -->
+    <table  class ="Table">
         <tr>
-            <th>Products</th><th>Prices</th><th>Percentage Change</th><th>Net Change</th>
+            <th>Products</th><th>Prices</th><th colspan="2">Percentage Change</th><th>Net Change</th>
+        </tr>
+        <tr><th><th></th><th>Yesterday</th><th>Today</th><th></th></tr>
+        <tr>
+           <td>Apple</td><td>163.70$</td><td>1.94%</td><td>1.95%</td><td>3.2$</td>
         </tr>
         <tr>
-           <th>Apple</th><th>163.70$</th><th>1.94%</th><th>3.2$</th>
+            <td>Amazon</td><td>3610.03$</td><td>-1.82%</td><td>-1.80%</td><td>-63.45$</td>
         </tr>
         <tr>
-            <th>Amazon</th><th>3610.03$</th><th>-1.82%</th><th>-63.45$</th>
+            <td>Tesla</td><td>1184.55$</td><td>4.21%</td><td>4.20%</td><td>43.97$</td>
         </tr>
         <tr>
-            <th>Tesla</th><th>1184.55$</th><th>4.21%</th><th>43.97$</th>
+            <td>Microsoft</td><td>343.42$</td><td>0.14%</td><td>0.16%</td><td>0.31$</td>
         </tr>
         <tr>
-            <th>Microsoft</th><th>343.42$</th><th>0.14%</th><th>0.31$</th>
-        </tr>
-        <tr>
-            <th>Google</th><th>2968.74$</th><th>-1.01%</th><th>-29.92$</th>
+            <td>Google</td><td>2968.74$</td><td>-1.01%</td><td>-1.0%</td><td>-29.92$</td>
         </tr>
     </table>
     </div>
