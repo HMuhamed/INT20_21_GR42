@@ -169,3 +169,19 @@ article p:first-child:first-line{
     font-weight: 700;
     font-size: 25px;
 }
+    /*BLOCKQUOTE*/
+blockquote{
+    font-size: 20px;
+    padding:10px 30px;
+    margin-bottom:40px;
+    position:relative;
+}
+blockquote::before{
+    content:open-quote;
+    position:absolute;
+    top:-48px;
+    left:-4px;
+    opacity:.3;
+    color:#666;
+    font-size:150px;
+}
