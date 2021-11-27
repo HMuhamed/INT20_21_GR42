@@ -185,3 +185,36 @@ blockquote::before{
     color:#666;
     font-size:150px;
 }
+.cards{
+    columns:25ch 3;
+    gap:40px;
+    margin-bottom: 40px;
+}
+.card{
+    font-size: 20px;
+    border:1px solid;
+    padding:10px 20px;
+    break-inside: avoid;
+}
+@media (max-width:950px){
+    .home{
+        grid-template-columns: 1fr;
+    }
+    .lists{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:20px;
+    }
+    .list{
+        grid-template-columns: 1fr 5fr;
+    }
+    .card{
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 650px) {
+    .lists {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
