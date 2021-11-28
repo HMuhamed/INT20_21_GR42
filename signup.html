@@ -23,7 +23,7 @@
                 <input type="password" placeholder="">
                 <input type="button" value="Submit">
             </form>
-            <p>Already have an account? <a href="#">Login here</a></p>
+            <p class="para_2">Already have an account? <a href="loginform.html">Login here</a></p>
         </div>
     </body>
 </html>
@@ -42,6 +42,9 @@ body{
     background-attachment: fixed;
 }
 .signup_box{
+    position:absolute;
+    top:5%;
+    left: 40%;
     width: 360px;
     height: 550px;
     background: white;
@@ -75,3 +78,25 @@ form input{
     border-radius: 6px;
     outline:none;
 }
+input[type="button"]{
+    width: 100%;
+    height: 40px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+.para_2{
+    text-align: center;
+    color:black;
+    font-size: 15px;
+    margin-top:10px;
+}
+.para_2 a{
+    color:#2691d9;
+}
+</style>
