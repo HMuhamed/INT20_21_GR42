@@ -4,10 +4,311 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="stylenews.css">
-        <title>Stock Market News
-        </title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <title>Stock Market News</title>
+        <style>
+            .navbar{
+                margin-left: -30px;
+                    width: 100%;
+                    height: 100px;
+                    display: flex;
+                    align-items: center;
+                   background: linear-gradient(to bottom, white, #dddddd);
+                }
+                .navbar .logo{ 
+                    font-size: 20px;
+                    font-weight: 900px;
+                    margin: 0 20px;
+                }
+                .icon-bar{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center; }
+                    .icon-bar a{
+                        text-align: center;
+                        padding: 20px 30px;
+                        font-size: 25px;
+                        color: darkblue;
+                    }
+        
+                    .menu-items
+                    {
+                        font-size:large;
+                        color:black;
+                        padding: 5px;
+                    }
+                    .icon-bar a:hover
+                    {
+                        background-color:snow;
+                        color: black;
+                    }
+        
+                    .title-heading
+                    {
+                        font-size: 25px;
+                        font-family:Georgia, 'Times New Roman', Times, serif;
+                        color: darkblue;
+                    }
+            *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            font-family:"Poppins",sans-serif;
+            min-height: 100vh;
+            max-width: 100vw;
+            line-height:1.4;
+            padding:20px 40px;
+            background-color: #dddddd;
+        }
+            .container{
+            max-width: 1200px;
+        }
+        .heading-1{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size:40px;
+            text-transform: uppercase;
+            color:darkblue;
+        }
+        .heading-2{
+            font-size:40px;
+            line-height:1.1;
+            margin-bottom: 20px;
+            color:black;
+        }
+            .heading-3{
+            font-size:20px;
+            text-transform: uppercase;
+            color:crimson;
+            margin-bottom: 10px;
+        }
+        .sub-heading{
+            font-size: 20px;
+            display:flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+            .sub-heading p{
+            font-weight: 700;
+            text-transform: capitalize;
+            margin-right: 10px;
+        }
+        .sub-heading span{
+            color:#555;
+            font-weight: 300;
+            border-right: 1px solid #ccc;
+            padding-right: 10px;
+        }
+        .sub-heading .important{
+            color:crimson;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+            /*HOME*/
+        .home{
+            display:grid;
+            grid-template-columns: 2fr 1fr;
+            gap:40px;
+        }
+        .home-img{
+            width:100%;
+        }
+        .list{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap:10px;
+            margin-bottom:10px;
+        }
+        .list img{
+            width:100%;
+            height:80px;
+        }
+        /*ARTICLE*/
+        .article>p{
+            font-size: 20px;
+            margin-bottom: 20px;
+        
+            columns: 3 25inch;
+            column-gap: 40px;
+            hyphens:auto;
+        }
+        article p:first-child:first-line{
+            font-weight: 700;
+            font-size: 25px;
+        }
+            /*BLOCKQUOTE*/
+        blockquote{
+            font-size: 20px;
+            padding:10px 30px;
+            margin-bottom:40px;
+            position:relative;
+        }
+        blockquote::before{
+            content:open-quote;
+            position:absolute;
+            top:-48px;
+            left:-4px;
+            opacity:.3;
+            color:#666;
+            font-size:150px;
+        }
+        .cards{
+            columns:25ch 3;
+            gap:40px;
+            margin-bottom: 40px;
+        }
+        .card{
+            font-size: 20px;
+            border:1px solid;
+            padding:10px 20px;
+            break-inside: avoid;
+        }
+        @media (max-width:950px){
+            .home{
+                grid-template-columns: 1fr;
+            }
+            .lists{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap:20px;
+            }
+            .list{
+                grid-template-columns: 1fr 5fr;
+            }
+            .card{
+                margin-bottom: 40px;
+            }
+        }
+        @media (max-width: 650px) {
+            .lists {
+              grid-template-columns: 1fr;
+            }
+          }
+
+          footer{
+    margin-left: -40px;
+    /*margin-right: -90px;*/
+    position: absolute;
+    background: #111;
+    height: auto;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;}
+    
+    .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;}
+    
+    .footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;}
+    
+    .footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;}
+    
+    .socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;}
+    
+    .socials li{
+    margin: 0 10px;}
+    
+    .socials a{
+    text-decoration: none;
+    color: #fff;}
+
+    .socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;}
+    
+    .socials a:hover i{
+    color: aqua;}
+    
+    .footer-bottom{
+    background: #000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;}
+    
+    
+    .footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;}
+    
+    .footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;}
+        </style>
     </head>
     <body>
+        <div class='navbar'>
+            <div class='logo'>
+            
+               <h1 class="title-heading">STOCK MARKET</h1> 
+        
+            </div>
+            <div class='icon-bar'>
+                <a href="home.html"><i class="fas fa-home">
+                    <div class="menu-items">
+                        Home
+        
+                    </div>
+                </i>
+                </a>
+                <a href="news.html"><i class="fas fa-mail-bulk">
+                    <div class="menu-items">
+                        Market News
+        
+                    </div>
+                </i>
+                </a>
+                <a href="#"><i class="fas fa-business-time">
+                    <div class="menu-items">
+                        Invest
+        
+                    </div>
+                </i>
+                </a>
+                <a href="loginform.html"><i class="fas fa-user-plus">
+                    <div class="menu-items">
+                        Log In
+        
+                    </div>
+                </i>
+                </a>
+                <a href="index.html"><i class="fas fa-info">
+                    <div class="menu-items">
+                        About Us
+        
+                    </div>
+                </i>
+                </a>
+        
+        
+                
+            </div>
+        
+        </div>
+        
+
         <div class="container">
             <header>
                 <h1 class="heading-1">Market News</h1>
@@ -74,147 +375,23 @@
                     <p>The Nifty Pharma index closed on a negative note on Monday. Shares of Gland Pharma(up 3.57 per cent) and Cipla(up 0.35 per cent) ended the day as top gainers in the pack. The Nifty Pharma index closed 1.75 per cent down at 13245.35. </p>    
 </div>
 </div>
+
+<footer>
+    <div class="footer-content" style="top: -900px;">
+        <h3>Stock Market</h3>
+        <p>Get the latest news about <i>Stock Market</i></p>
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2021  designed by <span>FIEK</span></p>
+    </div>
+</footer>  
     </body>
 </html>
-<style>
-    *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-body{
-    font-family:"Poppins",sans-serif;
-    min-height: 100vh;
-    max-width: 100vw;
-    line-height:1.4;
-    padding:20px 40px;
-    background-color:gainsboro;
-}
-    .container{
-    max-width: 1200px;
-}
-.heading-1{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size:40px;
-    text-transform: uppercase;
-    color:darkblue;
-    background-color: snow;
-}
-.heading-2{
-    font-size:40px;
-    line-height:1.1;
-    margin-bottom: 20px;
-    color:black;
-}
-    .heading-3{
-    font-size:20px;
-    text-transform: uppercase;
-    color:crimson;
-    margin-bottom: 10px;
-}
-.sub-heading{
-    font-size: 20px;
-    display:flex;
-    align-items: center;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    background-color: snow;
-}
-    .sub-heading p{
-    font-weight: 700;
-    text-transform: capitalize;
-    margin-right: 10px;
-}
-.sub-heading span{
-    color:#555;
-    font-weight: 300;
-    border-right: 1px solid #ccc;
-    padding-right: 10px;
-}
-.sub-heading .important{
-    color:crimson;
-    text-transform: uppercase;
-    font-weight: 300;
-}
-    /*HOME*/
-.home{
-    display:grid;
-    grid-template-columns: 2fr 1fr;
-    gap:40px;
-}
-.home-img{
-    width:100%;
-}
-.list{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap:10px;
-    margin-bottom:10px;
-}
-.list img{
-    width:100%;
-    height:80px;
-}
-/*ARTICLE*/
-.article>p{
-    font-size: 20px;
-    margin-bottom: 20px;
 
-    columns: 3 25inch;
-    column-gap: 40px;
-    hyphens:auto;
-}
-article p:first-child:first-line{
-    font-weight: 700;
-    font-size: 25px;
-}
-    /*BLOCKQUOTE*/
-blockquote{
-    font-size: 20px;
-    padding:10px 30px;
-    margin-bottom:40px;
-    position:relative;
-}
-blockquote::before{
-    content:open-quote;
-    position:absolute;
-    top:-48px;
-    left:-4px;
-    opacity:.3;
-    color:#666;
-    font-size:150px;
-}
-.cards{
-    columns:25ch 3;
-    gap:40px;
-    margin-bottom: 40px;
-}
-.card{
-    font-size: 20px;
-    border:1px solid;
-    padding:10px 20px;
-    break-inside: avoid;
-}
-@media (max-width:950px){
-    .home{
-        grid-template-columns: 1fr;
-    }
-    .lists{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap:20px;
-    }
-    .list{
-        grid-template-columns: 1fr 5fr;
-    }
-    .card{
-        margin-bottom: 40px;
-    }
-}
-@media (max-width: 650px) {
-    .lists {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
