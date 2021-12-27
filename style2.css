@@ -63,12 +63,10 @@
 
 }
 .video1{
-float: left;
+    position: relative;
+    left:50px;
 }
-.video2{
-    float:left;
-    
-}
+
 h1{
     color:#fff;
     font-size:100px;
