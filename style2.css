@@ -63,14 +63,11 @@
 
 }
 .video1{
-    margin-left: auto;
-    margin-right: auto;
-    display: block
+float: left;
 }
 .video2{
-    margin-left: auto;
-    margin-right: auto;
-    display: block
+    float:left;
+    
 }
 h1{
     color:#fff;
