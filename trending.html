@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>STOCK MARKET</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <style>
+        body
+        {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            background: #fcfcfc;
+        }
+        .navbar{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to bottom, white, #dddddd);
+        }
+        .navbar .logo{ 
+            font-size: 20px;
+            font-weight: 900px;
+            margin: 0 20px;
+        }
+        .icon-bar{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .icon-bar a{
+                text-align: center;
+                padding: 20px 30px;
+                font-size: 25px;
+                color: darkblue;
+            }
+
+            .menu-items
+            {
+                font-size:large;
+                color:black;
+                padding: 5px;
+            }
+            .icon-bar a:hover
+            {
+                background-color:snow;
+                color: black;
+            }
+
+            .title-heading
+            {
+                font-size: 25px;
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                color: darkblue;
+            }
+
+            *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+   
+    #Trend{
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-left: 20px;
+        margin-top: 35px;
+        font-style: italic;
+    }
+
+    #change-back-div
+{
+    width: 100%;
+     height:500px ;
+}
+
+#main-para
+{
+    text-align: left;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+
+
+
+.i-class
+    {
+        width: 20%;
+  padding: 12px 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  float: right;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+    }
+
+
+.b-class
+{
+    width: 15%;
+  background-color: #5F9EA0;
+  color: white;
+  padding: 14px 20px;
+  float: right;
+  margin-top: 70px;
+  margin-right: -240px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.trend{
+ margin-top: 50px;
+}
+.p{
+    margin-top: 10px;
+}
+
+
+.paragraph-class
+{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-style: normal;
+}
+
+.Table{
+        margin-right: 20px;
+    margin-left: auto;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    /*border-collapse: collapse;*/
+    border-spacing: 1px;
+    border-collapse: separate;
+    width: 45%;
+    padding-top: 125px;
+    
+    }
+  
+
+
+.table td, .table th {
+  border: 3px double #ddd;
+  padding: 8px;
+ 
+}
+
+.table tr{background-color: #f2f2f2;}
+
+.table tr:hover {background-color: #f2f2f2;}
+
+.table th {
+    width: 60%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: lightgrey;
+  color: darkblue;
+  
+}
+</style>
+
+
+<script>
+    function myFunction() {
+    let x = document.getElementById("demo").value;
+    
+    
+    try { 
+        if(x == 1)  throw document.body.style.backgroundColor = "#FFF5EE";
+        if(x==2) throw  document.body.style.backgroundColor = "#F0F8FF";
+        if(x==3) throw  document.body.style.backgroundColor = "#A9A9A9";
+        if(x==4) throw  document.body.style.backgroundColor = "#E9967A";
+        if(x==5) throw  document.body.style.backgroundColor = "#FFF0F5";
+      }
+      catch(err) {
+        message.innerHTML = "Input is " + err;
+      }
+      
+    }
+    </script>
+    
+</head>
+    <body>
+            <div class='navbar'>
+                <div class='logo'>
+                
+                   <h1 class="title-heading" id="stock_id">STOCK MARKET</h1> 
+        
+                </div>
+                <div class='icon-bar'>
+                    <a href="home.html"><i class="fas fa-home">
+                        <div class="menu-items">
+                            Home
+        
+                        </div>
+                    </i>
+                    </a>
+                    <a href="news.html"><i class="fas fa-mail-bulk">
+                        <div class="menu-items">
+                            Market News
+        
+                        </div>
+                    </i>
+                    </a>
+                    <a href="invest.html"><i class="fas fa-business-time">
+                        <div class="menu-items">
+                            Invest
+        
+                        </div>
+                    </i>
+                    </a>
+                    <a href="loginform.html"><i class="fas fa-user-plus">
+                        <div class="menu-items">
+                            Log In
+        
+                        </div>
+                    </i>
+                    </a>
+                    <a href="index.html"><i class="fas fa-info">
+                        <div class="menu-items">
+                            About Us
+        
+                        </div>
+                    </i>
+                    </a>
+        
+        
+                    
+                </div>
+        
+            </div>
+            <p id="p" class="paragraph-class"></p>
+            <script>
+                let text = "Whats trending";  
+            document.getElementById("p").innerHTML = text;
+            </script>
+            <div id="change-back-div">
+                <input  class = "i-class"id="demo" type="text">
+                <button class="b-class" type="button" onclick="myFunction()">Set background color:1-5</button>
+
+                <canvas id="myChart" style="width:100%;max-width:600px;margin-top: 20px;margin-left: 20px;"></canvas>
+
+<script>
+var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+      borderColor: "red",
+      fill: false
+    }, { 
+      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+      borderColor: "green",
+      fill: false
+    }, { 
+      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+      borderColor: "blue",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+</script>
+<div>
+    <table class = "table">
+        <tr>
+          <th id="t_header1"></th>
+          <th id="t_header2"></th>
+          <th id="t_header3"></th>
+        </tr>
+        <tr>
+          <td id="t_data1"></td>
+          <td id="t_data2"></td>
+          <td id="t_data3"></td>
+        </tr>
+        <tr>
+          <td id="t_data4"></td>
+          <td id="t_data5"></td>
+          <td id="t_data6"></td>
+        </tr>
+        <tr>
+            <td id="t_data7"></td>
+            <td id="t_data8"></td>
+            <td id="t_data9"></td>
+          </tr>
+          <tr>
+            <td id="t_data10"></td>
+            <td id="t_data11"></td>
+            <td id="t_data12"></td>
+          </tr>
+      </table>
+</div>  
+
+<script>
+    // Constructor function for Person objects
+    function Table_headers(th1, th2, th3) {
+      this.th1 = th1;
+      this.th2 = th2;
+      this.th3 = th3;
+    }
+
+
+    function Table_data(td1,td2,td3)
+    {
+        this.td1 = td1;
+        this.td2 = td2;
+        this.td3 = td3;
+    }
+
+    function Table_data_2(td4,td5,td6,td7,td8,td9,td10,td11,td12)
+    {
+        this.td4 = td4;
+        this.td5 = td5;
+        this.td6 = td6;
+        this.td7 = td7;
+        this.td8 = td8;
+        this.td9 = td9;
+        this.td10 = td10;
+        this.td11 = td11;
+        this.td12=td12;
+    }
+    
+
+    const myheadings = new Table_headers ("Currency", "Symbol","Price");
+    document.getElementById("t_header1").innerHTML =myheadings.th1; 
+    document.getElementById("t_header2").innerHTML =myheadings.th2;
+    document.getElementById("t_header3").innerHTML =myheadings.th3;  
+
+
+
+    const mytable_data = new Table_data ("Bitcoin", "&#8383;","44,856.46&#8364;");
+    document.getElementById("t_data1").innerHTML =mytable_data.td1; 
+    document.getElementById("t_data2").innerHTML =mytable_data.td2;
+    document.getElementById("t_data3").innerHTML =mytable_data.td3;
+    
+    
+    const mytable_data2 = new Table_data_2 ("Ethereum","ETH","3,601.50&#8364;","Binance Coin","BNB","484.04&#8364;","Tether","T","0.88&#8364;");
+    document.getElementById("t_data4").innerHTML =mytable_data2.td4; 
+    document.getElementById("t_data5").innerHTML =mytable_data2.td5;
+    document.getElementById("t_data6").innerHTML =mytable_data2.td6;
+    document.getElementById("t_data7").innerHTML =mytable_data2.td7;
+    document.getElementById("t_data8").innerHTML =mytable_data2.td8;
+    document.getElementById("t_data9").innerHTML =mytable_data2.td9;
+    document.getElementById("t_data10").innerHTML =mytable_data2.td10;
+    document.getElementById("t_data11").innerHTML =mytable_data2.td11;
+    document.getElementById("t_data12").innerHTML =mytable_data2.td12;
+
+  
+    </script>
+
+       
+    </body>
+</html>

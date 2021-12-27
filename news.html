@@ -71,6 +71,7 @@
             font-size:40px;
             text-transform: uppercase;
             color:darkblue;
+            text-shadow: 5px 5px 4px blue;
         }
         .heading-2{
             font-size:40px;
@@ -146,6 +147,8 @@
             padding:10px 30px;
             margin-bottom:40px;
             position:relative;
+            outline: 3px solid blue;
+            outline-offset: 1px;
         }
         blockquote::before{
             content:open-quote;
@@ -188,12 +191,13 @@
               grid-template-columns: 1fr;
             }
           }
+        
 
           footer{
     margin-left: -40px;
     /*margin-right: -90px;*/
     position: absolute;
-    background: #111;
+    background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
     height: auto;
     width: 100%;
     font-family: "Open Sans";
