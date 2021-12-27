@@ -107,18 +107,17 @@ button{
     display: inline-block;
     border-radius: 10px;
     padding: 15px 25px;
-    box-sizing: border-box;
+    box-sizing:content-box;
     cursor: pointer;
     margin: 10px 15px;
     background-position: center;
     background-size: cover;
     transition: transform 0.5s;
+
 }
 
 .card1{
-    background-image: url(photos/bitcoin.jpg); 
-    top:-50px;
-    right:200px;  
+    background-image: url(photos/bitcoin.jpg);   
 }
 .card2{
     background-image: url(photos/ethereum.jpg);   
@@ -128,8 +127,6 @@ button{
 }
 .card4{
     background-image: url(photos/shiba2.jpg); 
-    bottom: -50px;  
-    right:200px;
 }
 
 .card:hover{
