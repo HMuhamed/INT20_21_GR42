@@ -215,7 +215,21 @@ text-decoration: underline;
             </div>
         </i>
         </a>
-
+        <canvas id="myCanvas"></canvas>
+                
+        <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "darkblue";
+        ctx.fillRect(20, 20, 75, 50);
+        
+        //Turn transparency on
+        ctx.globalAlpha = 0.2;
+        ctx.fillStyle = "neonblue"; 
+        ctx.fillRect(50, 50, 75, 50); 
+        ctx.fillStyle = "mediumblue"; 
+        ctx.fillRect(80, 80, 75, 50);
+        </script>
 
         
     </div>

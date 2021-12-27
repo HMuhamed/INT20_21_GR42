@@ -273,6 +273,23 @@ float: left;
                 </div>
             </i>
             </a>
+            <canvas id="myCanvas"></canvas>
+                
+                <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "darkblue";
+                ctx.fillRect(20, 20, 75, 50);
+                
+                //Turn transparency on
+                ctx.globalAlpha = 0.2;
+                ctx.fillStyle = "neonblue"; 
+                ctx.fillRect(50, 50, 75, 50); 
+                ctx.fillStyle = "mediumblue"; 
+                ctx.fillRect(80, 80, 75, 50);
+                </script>
+                
+                
 
 
             
@@ -283,7 +300,7 @@ float: left;
         <img class ="image_stock" src="photos/stock_market home page image 1.jpeg" alt="Stock_market" width="600" height="400">
         <div class = "text_content">
             <h2><u>How Does the Stock Market Work?</u></h2>
-            <p><b id="replace_id_1">Key Takeaways</b></p>
+            <p><b>Key Takeaways</b></p>
             <ol>
                 <li>Stocks represent ownership equity in the firm and give shareholders voting 
                 rights as well as a residual claim on corporate earnings in the form of capital gains 
@@ -359,24 +376,21 @@ float: left;
             <h3>Stock Market</h3>
             <p>Get the latest news about <i><a href="#stock_id" style="text-decoration: none;">Stock Market</a></i></p>
             <ul class="socials">
+                
                 <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
                 <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="mailto: abc@example.com"><i class="fab fa-google-plus-g"></i></a></li>
                 <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
                 <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
             </ul>
+        
         </div>
         <div class="footer-bottom">
             <address>copyright &copy;2021  designed by <span><abbr title="Fakulteti i Inxhinierise Elektrike dhe Kompjuterike">FIEK</span></abbr></address>
         </div>
     </footer>  
 
-<script>
-    replace_id_1
 
-    let text = document.getElementById("replace_id_1").innerHTML; 
-document.getElementById("replace_id_1").innerHTML = text.replace("Key", "Important");
-</script>
 
 </body>
 
