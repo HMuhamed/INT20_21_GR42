@@ -117,7 +117,7 @@ button{
 
 .card1{
     background-image: url(photos/bitcoin.jpg); 
-    top:50px;
+    top:-50px;
     right:200px;  
 }
 .card2{
@@ -127,7 +127,9 @@ button{
     background-image: url(photos/solana.jpg);   
 }
 .card4{
-    background-image: url(photos/shiba2.jpg);   
+    background-image: url(photos/shiba2.jpg); 
+    bottom: -50px;  
+    right:200px;
 }
 
 .card:hover{
