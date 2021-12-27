@@ -62,7 +62,15 @@
         <div class="main">
             
                 
-            <h1>About Us</h1>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid darkblue">
+                </canvas>
+                
+                <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px Times New Roman";
+                ctx.strokeText("About Us",40,50);
+                </script>
             <h3>Committed beyond banking.
             </h3>
             <h2>Our Company</h2>
