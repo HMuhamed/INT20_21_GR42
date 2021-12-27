@@ -130,6 +130,42 @@
     font-size: 30px;
     margin-top: 20px;
     margin-left: 10px;
+    font-style: normal;
+}
+
+.Table{
+        margin-right: 20px;
+    margin-left: auto;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    /*border-collapse: collapse;*/
+    border-spacing: 1px;
+    border-collapse: separate;
+    width: 45%;
+    padding-top: 125px;
+    
+    }
+  
+
+
+.table td, .table th {
+  border: 3px double #ddd;
+  padding: 8px;
+ 
+}
+
+.table tr{background-color: #f2f2f2;}
+
+.table tr:hover {background-color: #f2f2f2;}
+
+.table th {
+    width: 60%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: lightgrey;
+  color: darkblue;
+  
 }
 </style>
 
@@ -240,15 +276,35 @@ new Chart("myChart", {
   }
 });
 </script>
-
-        
-            </div>
-
-            
-          
-        
-        
-        
+<div>
+    <table class = "table">
+        <tr>
+          <th>Currency</th>
+          <th>Symbol</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Bitcoin</td>
+          <td>&#8383;</td>
+          <td>44,856.46&#8364;</td>
+        </tr>
+        <tr>
+          <td>Ethereum </td>
+          <td>ETH</td>
+          <td>3,601.50&#8364;</td>
+        </tr>
+        <tr>
+            <td>Binance Coin</td>
+            <td>BNB</td>
+            <td>484.04&#8364;</td>
+          </tr>
+          <tr>
+            <td>Tether</td>
+            <td>T</td>
+            <td>0.88&#8364;</td>
+          </tr>
+      </table>
+</div>    
        
     </body>
 </html>
