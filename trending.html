@@ -163,6 +163,20 @@
   color: darkblue;
   
 }
+
+
+.list-div
+{
+    width: 500px;
+    height: 500px;
+    margin:auto;
+    margin-top: 50px;
+    border: 1px solid black;
+    padding: 20px 20px;
+  
+}
+
+
 </style>
 
 
@@ -302,6 +316,23 @@ new Chart("myChart", {
       </table>
 </div>  
 
+
+<div class="list-div">
+    <h3 style="margin-bottom: 20px;">Today's Cryptocurrency Prices by WorldWide Cap</h3>
+    <p style="margin-bottom: 30px;" id="date_id"></p>
+    <dl>
+        <dt><i class="fab fa-bitcoin fa-3x"></i></dt>
+        <dd style="margin-left: 50px;" id="list_element_1"></dd>
+        <dt><i class="fab fa-ethereum fa-3x"></i></dt>
+        <dd style="margin-left: 50px;" id="list_element_2"></dd>
+        <dt style=" margin-top: 25px;"><i class="fas fa-coins fa-3x"></i></dt>
+        <dd style="margin-left: 50px;" id="list_element_3"></dd>
+        <dt style=" margin-top: 25px;"><i class="fas fa-dollar-sign fa-3x"></i></dt>
+        <dd style="margin-left: 50px;" id="list_element_4"></dd>
+      </dl>
+
+</div>
+
 <script>
     // Constructor function for Person objects
     function Table_headers(th1, th2, th3) {
@@ -355,6 +386,37 @@ new Chart("myChart", {
     document.getElementById("t_data10").innerHTML =mytable_data2.td10;
     document.getElementById("t_data11").innerHTML =mytable_data2.td11;
     document.getElementById("t_data12").innerHTML =mytable_data2.td12;
+
+
+
+    //valueOf()
+    let num = 51879.54;
+    let n = num.valueOf()
+    document.getElementById("list_element_1").innerHTML = "Bitcoin BTC "+n + Math.PI;
+
+
+       //toFixed()
+       let num1 = 4124.43;
+       let n1 = num1.toFixed()
+    document.getElementById("list_element_2").innerHTML = "Ethereum ETH "+n1 + Math.LN10;
+
+        //toPrecision()
+        let num2 = 568.07;
+       let n2 = num2.toPrecision(3)
+    document.getElementById("list_element_3").innerHTML = "Binance Coin BNB "+n2 +Math.LN2;
+
+
+
+      //toExponential()
+      let num3 = 568.07;
+       let n3 = num2.toExponential()
+       document.getElementById("list_element_4").innerHTML = "USD Coin USD "+n3 +Math.E;
+   
+
+       //date()
+       const d = new Date(2021, 11, 27, 10, 33, 30, 0);
+       document.getElementById("date_id").innerHTML = d;
+
 
   
     </script>

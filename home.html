@@ -283,7 +283,7 @@ float: left;
         <img class ="image_stock" src="photos/stock_market home page image 1.jpeg" alt="Stock_market" width="600" height="400">
         <div class = "text_content">
             <h2><u>How Does the Stock Market Work?</u></h2>
-            <p><b>Key Takeaways</b></p>
+            <p><b id="replace_id_1">Key Takeaways</b></p>
             <ol>
                 <li>Stocks represent ownership equity in the firm and give shareholders voting 
                 rights as well as a residual claim on corporate earnings in the form of capital gains 
@@ -371,7 +371,12 @@ float: left;
         </div>
     </footer>  
 
+<script>
+    replace_id_1
 
+    let text = document.getElementById("replace_id_1").innerHTML; 
+document.getElementById("replace_id_1").innerHTML = text.replace("Key", "Important");
+</script>
 
 </body>
 
