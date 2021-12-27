@@ -97,7 +97,7 @@ body{
 
 footer{
     position: absolute;
-    background: #111;
+    background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
     height: auto;
     width: 100%;
     font-family: "Open Sans";
