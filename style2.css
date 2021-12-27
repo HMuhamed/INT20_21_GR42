@@ -63,15 +63,14 @@
 
 }
 .video1{
+    top:-30px;
     position: relative;
     left:50px;
 }
 .video2{
     position:relative;
     top: 250px;
-    right:50px;
-
-
+    right:150px;
 }
 h1{
     color:#fff;
