@@ -82,10 +82,7 @@
 }
 
 
-#change-back-div
-{
-  
-}
+
 
 
 .i-class
@@ -95,7 +92,6 @@
   margin-top: 20px;
   margin-right: 20px;
   float: right;
-  display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -279,32 +275,90 @@ new Chart("myChart", {
 <div>
     <table class = "table">
         <tr>
-          <th>Currency</th>
-          <th>Symbol</th>
-          <th>Price</th>
+          <th id="t_header1"></th>
+          <th id="t_header2"></th>
+          <th id="t_header3"></th>
         </tr>
         <tr>
-          <td>Bitcoin</td>
-          <td>&#8383;</td>
-          <td>44,856.46&#8364;</td>
+          <td id="t_data1"></td>
+          <td id="t_data2"></td>
+          <td id="t_data3"></td>
         </tr>
         <tr>
-          <td>Ethereum </td>
-          <td>ETH</td>
-          <td>3,601.50&#8364;</td>
+          <td id="t_data4"></td>
+          <td id="t_data5"></td>
+          <td id="t_data6"></td>
         </tr>
         <tr>
-            <td>Binance Coin</td>
-            <td>BNB</td>
-            <td>484.04&#8364;</td>
+            <td id="t_data7"></td>
+            <td id="t_data8"></td>
+            <td id="t_data9"></td>
           </tr>
           <tr>
-            <td>Tether</td>
-            <td>T</td>
-            <td>0.88&#8364;</td>
+            <td id="t_data10"></td>
+            <td id="t_data11"></td>
+            <td id="t_data12"></td>
           </tr>
       </table>
-</div>    
+</div>  
+
+<script>
+    // Constructor function for Person objects
+    function Table_headers(th1, th2, th3) {
+      this.th1 = th1;
+      this.th2 = th2;
+      this.th3 = th3;
+    }
+
+
+    function Table_data(td1,td2,td3)
+    {
+        this.td1 = td1;
+        this.td2 = td2;
+        this.td3 = td3;
+    }
+
+    function Table_data_2(td4,td5,td6,td7,td8,td9,td10,td11,td12)
+    {
+        this.td4 = td4;
+        this.td5 = td5;
+        this.td6 = td6;
+        this.td7 = td7;
+        this.td8 = td8;
+        this.td9 = td9;
+        this.td10 = td10;
+        this.td11 = td11;
+        this.td12=td12;
+    }
+    
+
+    const myheadings = new Table_headers ("Currency", "Symbol","Price");
+    document.getElementById("t_header1").innerHTML =myheadings.th1; 
+    document.getElementById("t_header2").innerHTML =myheadings.th2;
+    document.getElementById("t_header3").innerHTML =myheadings.th3;  
+
+
+
+    const mytable_data = new Table_data ("Bitcoin", "&#8383;","44,856.46&#8364;");
+    document.getElementById("t_data1").innerHTML =mytable_data.td1; 
+    document.getElementById("t_data2").innerHTML =mytable_data.td2;
+    document.getElementById("t_data3").innerHTML =mytable_data.td3;
+    
+    
+    const mytable_data2 = new Table_data_2 ("Ethereum","ETH","3,601.50&#8364;","Binance Coin","BNB","484.04&#8364;","Tether","T","0.88&#8364;");
+    document.getElementById("t_data4").innerHTML =mytable_data2.td4; 
+    document.getElementById("t_data5").innerHTML =mytable_data2.td5;
+    document.getElementById("t_data6").innerHTML =mytable_data2.td6;
+    document.getElementById("t_data7").innerHTML =mytable_data2.td7;
+    document.getElementById("t_data8").innerHTML =mytable_data2.td8;
+    document.getElementById("t_data9").innerHTML =mytable_data2.td9;
+    document.getElementById("t_data10").innerHTML =mytable_data2.td10;
+    document.getElementById("t_data11").innerHTML =mytable_data2.td11;
+    document.getElementById("t_data12").innerHTML =mytable_data2.td12;
+
+  
+    </script>
+
        
     </body>
 </html>
