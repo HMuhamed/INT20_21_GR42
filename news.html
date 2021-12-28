@@ -336,16 +336,24 @@
                 <script>
                 // Create an object:
                 const person = {
-                  firstName: "Market",
-                  lastName : "News",
+                  firstWord: "Market",
+                  secondWord : "News",
                  
                 };
 
                 document.getElementById("demo2").innerHTML =
-person.firstName +" " + person.lastName;
+person.firstWord +" " + person.secondWord;
 </script>
                 <div class="sub-heading">
-                    <p>Saturday, <span>27 November 2021</span></p>
+                    <p>Saturday, <span id="demo3"> </span></p>
+                    
+
+                    <script>
+                    let x = 27 + " "+"November"+ " "+ 2021;
+                    document.getElementById("demo3").innerHTML = x;
+                    </script>
+
+
                     <p class="important">Your right to know</p>
                 </div>
             </header>
