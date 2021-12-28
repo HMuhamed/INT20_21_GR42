@@ -176,7 +176,73 @@
     background-image: url(./photos/crip.jpg);
   
 }
+footer{
+    position: absolute;
+    background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;}
+    
+    .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;}
+    
+    .footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;}
+    
+    .footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;}
+    
+    .socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;}
+    
+    .socials li{
+    margin: 0 10px;}
+    
+    .socials a{
+    text-decoration: none;
+    color: #fff;}
 
+    .socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;}
+    
+    .socials a:hover i{
+    color: aqua;}
+    
+    .footer-bottom{
+    background: #000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;}
+    
+    
+    .footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;}
+    
+    .footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;}
+    
 
 </style>
 
@@ -331,9 +397,8 @@ new Chart("myChart", {
         <dt style=" margin-top: 25px;"><i class="fas fa-dollar-sign fa-3x"></i></dt>
         <dd style="margin-left: 50px;" id="list_element_4"></dd>
       </dl>
-
+    
 </div>
-
 <script>
     // Constructor function for Person objects
     function Table_headers(th1, th2, th3) {
@@ -421,7 +486,24 @@ new Chart("myChart", {
 
   
     </script>
-
+ <footer>
+    <div class="footer-content" style="top: -900px;">
+        <h3>Stock Market</h3>
+        <p>Get the latest news about <i><a href="#stock_id" style="text-decoration: none;">Stock Market</a></i></p>
+        <ul class="socials">
+            
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="mailto: abc@example.com"><i class="fab fa-google-plus-g"></i></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    
+    </div>
+    <div class="footer-bottom">
+        <address>copyright &copy;2021  designed by <span><abbr title="Fakulteti i Inxhinierise Elektrike dhe Kompjuterike">FIEK</span></abbr></address>
+    </div>
+</footer>
        
     </body>
 </html>
