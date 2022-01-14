@@ -305,7 +305,21 @@
                     </div>
                 </i>
                 </a>
-        
+                <canvas id="myCanvas"></canvas>
+                
+                <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "darkblue";
+                ctx.fillRect(20, 20, 75, 50);
+                
+                //Turn transparency on
+                ctx.globalAlpha = 0.2;
+                ctx.fillStyle = "neonblue"; 
+                ctx.fillRect(50, 50, 75, 50); 
+                ctx.fillStyle = "mediumblue"; 
+                ctx.fillRect(80, 80, 75, 50);
+                </script>
         
                 
             </div>
@@ -315,17 +329,41 @@
 
         <div class="container">
             <header>
-                <h1 class="heading-1">Market News</h1>
+                
+                <h1 class="heading-1"id="demo2"></h1>
+
+                
+                <script>
+                // Create an object:
+                const person = {
+                  firstWord: "Market",
+                  secondWord : "News",
+                 
+                };
+
+                document.getElementById("demo2").innerHTML =
+person.firstWord +" " + person.secondWord;
+</script>
                 <div class="sub-heading">
-                    <p>Saturday, <span>27 November 2021</span></p>
+                    <p>Saturday, <span id="demo3"> </span></p>
+                    
+
+                    <script>
+                    let x = 27 + " "+"November"+ " "+ 2021;
+                    document.getElementById("demo3").innerHTML = x;
+                    </script>
+
+
                     <p class="important">Your right to know</p>
                 </div>
             </header>
             <div class="main">
                 <div class="home">
                     <div class="left">
+                        <figure>
                         <img src="photos/stock1.jpg" class="home" alt ="Stock photo">
-
+                        <figcaption>Current Graph </figcaption>
+                         </figure>
                         <h2 class="heading-2">
                             Ahead of Market: 12 things that will decide stock action on Tuesday.</h2>
                     </div>

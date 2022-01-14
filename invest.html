@@ -51,7 +51,21 @@
                     </div>
                 </i>
                 </a>
-    
+                <canvas id="myCanvas"></canvas>
+                
+                <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "darkblue";
+                ctx.fillRect(20, 20, 75, 50);
+                
+                //Turn transparency on
+                ctx.globalAlpha = 0.2;
+                ctx.fillStyle = "neonblue"; 
+                ctx.fillRect(50, 50, 75, 50); 
+                ctx.fillStyle = "mediumblue"; 
+                ctx.fillRect(80, 80, 75, 50);
+                </script>
     
                 
             </div>
@@ -64,10 +78,29 @@
                     <ul style="list-style-type:square; margin-left: 25px;">
                         <li>Build your own investment strategy</li>
                         <li> Diversify your portfolio with our broad range of options.</li>
+<<<<<<< HEAD
                         <p>Count coins: <output id="result"></output></p>
                     </ul>
                 <button onclick="startCounter()">Start</button> 
                 <button onclick="stopCounter()">Stop</button>
+=======
+                    
+                    <li>
+                    <p id="demo"></p></li></ul>
+
+<script>
+const coins = [
+  "Bitcoin",
+  "Ethereum",
+  "Solana",
+  "Shiba Inu"
+  
+]; 
+document.getElementById("demo").innerHTML = coins;
+</script>
+
+                    <button type="button">Start Now</button>
+>>>>>>> 7751cfbddce87a782e32aecde7cf2a3b6d43bdb3
                 </div>
                 <script>
                 var w;
