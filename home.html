@@ -6,7 +6,15 @@
     <title>STOCK MARKET</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+   <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $(".suprise").slideToggle();
+          });
+        });
+        </script>
     <style>
         body
         {
@@ -405,6 +413,9 @@ float: left;
             });
  
         </script>
+        <p class="suprise">Click See What's Trending! for a suprise</p>
+
+        <button>Hide or Show</button>
     <footer>
         <div class="footer-content" style="top: -900px;">
             <h3>Stock Market</h3>
