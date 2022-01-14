@@ -99,12 +99,25 @@
             </dl>
             
 
-            <button class="btn" onclick="myFunction()">Read More </button>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script>
-                function myFunction() {
-  alert("Thank you for your interest in knowing more about us!");
-}
+            $(document).ready(function(){
+              $("button").focus(function(){
+                $("span").css("display", "inline").fadeOut(2000);
+              });
+            });
             </script>
+            <style>
+            span {
+              display: none;
+              color: white;
+              margin-left: 10px;
+            }
+            </style>
+              
+             <button class="btn" type="button">Read More</button><br><br>
+             <span>Please wait page is loading...</span>
+         </div>
 
 
         </div>
