@@ -297,7 +297,25 @@ float: left;
                     capital but it can also mean higher costs and increased regulation.</li>          
                     </ol>
         </div>
+        <div id="result">
+            <!--Position information will be inserted here-->
+        </div>
+        <button type="button" onclick="showPosition();">Show Position</button>
+    
+        <script>
+            function showPosition() {
+                if(navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var positionInfo = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+                        document.getElementById("result").innerHTML = positionInfo;
+                    });
+                } else {
+                    alert("Sorry, your browser does not support HTML5 geolocation.");
+                }
+            }
+        </script>
     </div>
+    
     <div class="table-div">
         <img  class ="graph-photo" src="photos/tb_gp.png" width="600px" height="550px" style="float: left;margin-left: 30px;">
         <table class ="Table" align="center">
@@ -353,6 +371,21 @@ float: left;
             }
           }
         });
+        </script>
+        <script>
+      
+            const successCallback=(position)=> {
+                console.log(position);
+            };
+            const errorCallback=(error)=>{
+                console.error(error);
+            };
+            navigator.geolocation.getCurrentPosition(successCallback,errorCallback, 
+            {
+                enableHighAccuracy:true,
+                timeout:5000
+            });
+ 
         </script>
     <footer>
         <div class="footer-content" style="top: -900px;">
