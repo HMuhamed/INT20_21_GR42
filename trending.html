@@ -4,6 +4,33 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>STOCK MARKET</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $(".like").fadeOut();
+  });
+  $(".btn2").click(function(){
+    $(".like").fadeIn();
+  });
+});
+</script>
+<script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $(".like").hide(1000);
+        alert("Thank you for your review");
+      });
+    });
+    </script>
+    <script> 
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("div").animate({left: '250px'});
+          });
+        });
+        </script> 
+
     <style>
         body
         {
@@ -176,6 +203,18 @@
     background-image: url(./photos/crip.jpg);
   
 }
+.like{
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.btn1{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.btn2{
+    
+    margin-top: 10px;
+}
 footer{
     position: absolute;
     background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
@@ -260,6 +299,7 @@ footer{
         if(x==5) throw  document.body.style.backgroundColor = "#FFF0F5";
       }
       catch(err) {
+          console.log(err);
         message.innerHTML = "Input is " + err;
       }
       
@@ -268,6 +308,7 @@ footer{
     
 </head>
     <body>
+
             <div class='navbar'>
                 <div class='logo'>
                 
@@ -314,7 +355,7 @@ footer{
         
                     
                 </div>
-        
+                
             </div>
             <p id="p" class="paragraph-class"></p>
             <script>
@@ -486,6 +527,14 @@ new Chart("myChart", {
 
   
     </script>
+
+<p class ="like">Do you like this page ? Give it a like if so!!</p>
+<div style="background:#1e87b8;margin-top: 5px;height:60px;width:500px;position:absolute;"><p>Review:</p><button class="btn1">like</button><button class="btn2">dislike</button></div>
+
+</body>
+</html>
+
+
  <footer>
     <div class="footer-content" style="top: -900px;">
         <h3>Stock Market</h3>
