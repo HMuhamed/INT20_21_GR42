@@ -170,6 +170,8 @@ text-decoration: none;
 .signup_link a:hover{
 text-decoration: underline;
 }
+
+
 </style>
 </head>
 <body>
@@ -236,6 +238,13 @@ text-decoration: underline;
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(":checkbox").wrap("<span style='background-color:lightblue'>");
+});
+</script>
+
 
 
 <div class="center">
@@ -247,10 +256,12 @@ text-decoration: underline;
               <span></span>
               <label>Username</label>
           </div>
+        
+            </script>
           <div class="txt_field">
-              <input type="password"required>
+            <input type="password"required>
               <span></span>
-              <label>Password</label>
+                <label>Password</label>
           </div>
           <div class="pass">Forgot Password?</div>
           <input type="checkbox"  value="Remember" style="margin-bottom: 10px;">

@@ -1,474 +1,574 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="stylenews.css">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <title>Stock Market News</title>
-        <style>
-            .navbar{
-                margin-left: -30px;
-                    width: 100%;
-                    height: 100px;
-                    display: flex;
-                    align-items: center;
-                   background: linear-gradient(to bottom, white, #dddddd);
-                }
-                .navbar .logo{ 
-                    font-size: 20px;
-                    font-weight: 900px;
-                    margin: 0 20px;
-                }
-                .icon-bar{
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center; }
-                    .icon-bar a{
-                        text-align: center;
-                        padding: 20px 30px;
-                        font-size: 25px;
-                        color: darkblue;
-                    }
-        
-                    .menu-items
-                    {
-                        font-size:large;
-                        color:black;
-                        padding: 5px;
-                    }
-                    .icon-bar a:hover
-                    {
-                        background-color:snow;
-                        color: black;
-                    }
-        
-                    .title-heading
-                    {
-                        font-size: 25px;
-                        font-family:Georgia, 'Times New Roman', Times, serif;
-                        color: darkblue;
-                    }
-            *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylenews.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Stock Market News</title>
+    <style>
+        .navbar {
+            margin-left: -30px;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to bottom, white, #dddddd);
         }
-        body{
-            font-family:"Poppins",sans-serif;
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: 900px;
+            margin: 0 20px;
+        }
+
+        .icon-bar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-bar a {
+            text-align: center;
+            padding: 20px 30px;
+            font-size: 25px;
+            color: darkblue;
+        }
+
+        .menu-items {
+            font-size: large;
+            color: black;
+            padding: 5px;
+        }
+
+        .icon-bar a:hover {
+            background-color: snow;
+            color: black;
+        }
+
+        .title-heading {
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: darkblue;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
             min-height: 100vh;
             max-width: 100vw;
-            line-height:1.4;
-            padding:20px 40px;
+            line-height: 1.4;
+            padding: 20px 40px;
             background-color: #dddddd;
         }
-            .container{
+
+        .container {
             max-width: 1200px;
         }
-        .heading-1{
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            font-size:40px;
+
+        .heading-1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 40px;
             text-transform: uppercase;
-            color:darkblue;
+            color: darkblue;
             text-shadow: 5px 5px 4px blue;
         }
-        .heading-2{
-            font-size:40px;
-            line-height:1.1;
+
+        .heading-2 {
+            font-size: 40px;
+            line-height: 1.1;
             margin-bottom: 20px;
-            color:black;
+            color: black;
         }
-            .heading-3{
-            font-size:20px;
+
+        .heading-3 {
+            font-size: 20px;
             text-transform: uppercase;
-            color:crimson;
+            color: crimson;
             margin-bottom: 10px;
         }
-        .sub-heading{
+
+        .sub-heading {
             font-size: 20px;
-            display:flex;
+            display: flex;
             align-items: center;
             margin-bottom: 30px;
             border-bottom: 1px solid #ccc;
             padding-bottom: 10px;
         }
-            .sub-heading p{
+
+        .sub-heading p {
             font-weight: 700;
             text-transform: capitalize;
             margin-right: 10px;
         }
-        .sub-heading span{
-            color:#555;
+
+        .sub-heading span {
+            color: #555;
             font-weight: 300;
             border-right: 1px solid #ccc;
             padding-right: 10px;
         }
-        .sub-heading .important{
-            color:crimson;
+
+        .sub-heading .important {
+            color: crimson;
             text-transform: uppercase;
             font-weight: 300;
         }
-            /*HOME*/
-        .home{
-            display:grid;
+
+        /*HOME*/
+        .home {
+            display: grid;
             grid-template-columns: 2fr 1fr;
-            gap:40px;
+            gap: 40px;
         }
-        .home-img{
-            width:100%;
+
+        .home-img {
+            width: 100%;
         }
-        .list{
+
+        .list {
             display: grid;
             grid-template-columns: 1fr 3fr;
-            gap:10px;
-            margin-bottom:10px;
+            gap: 10px;
+            margin-bottom: 10px;
         }
-        .list img{
-            width:100%;
-            height:80px;
+
+        .list img {
+            width: 100%;
+            height: 80px;
         }
+
         /*ARTICLE*/
-        .article>p{
+        .article>p {
             font-size: 20px;
             margin-bottom: 20px;
-        
+
             columns: 3 25inch;
             column-gap: 40px;
-            hyphens:auto;
+            hyphens: auto;
         }
-        article p:first-child:first-line{
+
+        article p:first-child:first-line {
             font-weight: 700;
             font-size: 25px;
         }
-            /*BLOCKQUOTE*/
-        blockquote{
+
+        /*BLOCKQUOTE*/
+        blockquote {
             font-size: 20px;
-            padding:10px 30px;
-            margin-bottom:40px;
-            position:relative;
+            padding: 10px 30px;
+            margin-bottom: 40px;
+            position: relative;
             outline: 3px solid blue;
             outline-offset: 1px;
         }
-        blockquote::before{
-            content:open-quote;
-            position:absolute;
-            top:-48px;
-            left:-4px;
-            opacity:.3;
-            color:#666;
-            font-size:150px;
+
+        blockquote::before {
+            content: open-quote;
+            position: absolute;
+            top: -48px;
+            left: -4px;
+            opacity: .3;
+            color: #666;
+            font-size: 150px;
         }
-        .cards{
-            columns:25ch 3;
-            gap:40px;
+
+        .cards {
+            columns: 25ch 3;
+            gap: 40px;
             margin-bottom: 40px;
         }
-        .card{
+
+        .card {
             font-size: 20px;
-            border:1px solid;
-            padding:10px 20px;
+            border: 1px solid;
+            padding: 10px 20px;
             break-inside: avoid;
         }
-        @media (max-width:950px){
-            .home{
+
+        @media (max-width:950px) {
+            .home {
                 grid-template-columns: 1fr;
             }
-            .lists{
+
+            .lists {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap:20px;
+                gap: 20px;
             }
-            .list{
+
+            .list {
                 grid-template-columns: 1fr 5fr;
             }
-            .card{
+
+            .card {
                 margin-bottom: 40px;
             }
         }
+
         @media (max-width: 650px) {
             .lists {
-              grid-template-columns: 1fr;
+                grid-template-columns: 1fr;
             }
-          }
-        
+        }
 
-          footer{
-    margin-left: -40px;
-    /*margin-right: -90px;*/
-    position: absolute;
-    background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
-    height: auto;
-    width: 100%;
-    font-family: "Open Sans";
-    padding-top: 40px;
-    color: #fff;}
-    
-    .footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;}
-    
-    .footer-content h3{
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    line-height: 3rem;}
-    
-    .footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;}
-    
-    .socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;}
-    
-    .socials li{
-    margin: 0 10px;}
-    
-    .socials a{
-    text-decoration: none;
-    color: #fff;}
 
-    .socials a i{
-    font-size: 1.1rem;
-    transition: color .4s ease;}
-    
-    .socials a:hover i{
-    color: aqua;}
-    
-    .footer-bottom{
-    background: #000;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;}
-    
-    
-    .footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;}
-    
-    .footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;}
-        </style>
-    </head>
-    <body>
-        <div class='navbar'>
-            <div class='logo'>
-            
-               <h1 class="title-heading">STOCK MARKET</h1> 
-        
-            </div>
-            <div class='icon-bar'>
-                <a href="home.html"><i class="fas fa-home">
+        footer {
+            margin-left: -40px;
+            /*margin-right: -90px;*/
+            position: absolute;
+            background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+            height: auto;
+            width: 100%;
+            font-family: "Open Sans";
+            padding-top: 40px;
+            color: #fff;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer-content h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            line-height: 3rem;
+        }
+
+        .footer-content p {
+            max-width: 500px;
+            margin: 10px auto;
+            line-height: 28px;
+            font-size: 14px;
+        }
+
+        .socials {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0 3rem 0;
+        }
+
+        .socials li {
+            margin: 0 10px;
+        }
+
+        .socials a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .socials a i {
+            font-size: 1.1rem;
+            transition: color .4s ease;
+        }
+
+        .socials a:hover i {
+            color: aqua;
+        }
+
+        .footer-bottom {
+            background: #000;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+
+        .footer-bottom p {
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        .footer-bottom span {
+            text-transform: uppercase;
+            opacity: .4;
+            font-weight: 200;
+        }
+        #hide{
+            width: 180px;
+             color:rgb(1, 39, 75);
+             font-size: 15px;
+             font-weight: bold;
+             padding: 12px 0;
+             background: rgb(248, 247, 244);
+             border:0;
+             border-radius: 20px;
+             outline: none;
+             margin-top: 30px;
+             cursor: pointer;
+            }
+            #show{
+            width: 180px;
+             color:rgb(1, 35,75);
+             font-size: 15px;
+             font-weight: bold;
+             padding: 12px 0;
+             background: rgb(248, 247, 244);
+             border:0;
+             border-radius: 20px;
+             outline: none;
+             margin-top: 30px;
+             cursor: pointer;
+            }
+
+            </style>
+            </head>
+
+<body>
+    <div class='navbar'>
+        <div class='logo'>
+
+            <h1 class="title-heading">STOCK MARKET</h1>
+
+        </div>
+        <div class='icon-bar'>
+            <a href="home.html"><i class="fas fa-home">
                     <div class="menu-items">
                         Home
-        
+
                     </div>
                 </i>
-                </a>
-                <a href="news.html"><i class="fas fa-mail-bulk">
+            </a>
+            <a href="news.html"><i class="fas fa-mail-bulk">
                     <div class="menu-items">
                         Market News
-        
+
                     </div>
                 </i>
-                </a>
-                <a href="invest.html"><i class="fas fa-business-time">
+            </a>
+            <a href="invest.html"><i class="fas fa-business-time">
                     <div class="menu-items">
                         Invest
-        
+
                     </div>
                 </i>
-                </a>
-                <a href="loginform.html"><i class="fas fa-user-plus">
+            </a>
+            <a href="loginform.html"><i class="fas fa-user-plus">
                     <div class="menu-items">
                         Log In
-        
+
                     </div>
                 </i>
-                </a>
-                <a href="index.html"><i class="fas fa-info">
+            </a>
+            <a href="index.html"><i class="fas fa-info">
                     <div class="menu-items">
                         About Us
-        
+
                     </div>
                 </i>
-                </a>
-                <canvas id="myCanvas"></canvas>
-                
-                <script>
+            </a>
+            <canvas id="myCanvas"></canvas>
+
+            <script>
                 var c = document.getElementById("myCanvas");
                 var ctx = c.getContext("2d");
                 ctx.fillStyle = "darkblue";
                 ctx.fillRect(20, 20, 75, 50);
-                
+
                 //Turn transparency on
                 ctx.globalAlpha = 0.2;
-                ctx.fillStyle = "neonblue"; 
-                ctx.fillRect(50, 50, 75, 50); 
-                ctx.fillStyle = "mediumblue"; 
+                ctx.fillStyle = "neonblue";
+                ctx.fillRect(50, 50, 75, 50);
+                ctx.fillStyle = "mediumblue";
                 ctx.fillRect(80, 80, 75, 50);
-                </script>
-        
-                
-            </div>
-        
+            </script>
+
+
         </div>
-        
 
-        <div class="container">
-            <header>
-                
-                <h1 class="heading-1"id="demo2"></h1>
+    </div>
 
-                
-                <script>
+
+    <div class="container">
+        <header>
+
+            <h1 class="heading-1" id="demo2"></h1>
+
+
+            <script>
                 // Create an object:
                 const person = {
-                  firstWord: "Market",
-                  secondWord : "News",
-                 
+                    firstWord: "Market",
+                    secondWord: "News",
+
                 };
 
                 document.getElementById("demo2").innerHTML =
-person.firstWord +" " + person.secondWord;
-</script>
-                <div class="sub-heading">
-                    <p>Saturday, <span id="demo3"> </span></p>
-                    
+                    person.firstWord + " " + person.secondWord;
+            </script>
+            <div class="sub-heading">
+                <p>Saturday, <span id="demo3"> </span></p>
 
-                    <script>
-                    let x = 27 + " "+"November"+ " "+ 2021;
+
+                <script>
+                    let x = 27 + " " + "November" + " " + 2021;
                     document.getElementById("demo3").innerHTML = x;
-                    </script>
+                </script>
 
 
-                    <p class="important">Your right to know</p>
-                </div>
-            </header>
-            <div class="main">
-                <div class="home">
-                    <div class="left">
-                        <figure>
-                        <img src="photos/stock1.jpg" class="home" alt ="Stock photo">
+                <p class="important">Your right to know</p>
+            </div>
+        </header>
+        <div class="main">
+            <div class="home">
+                <div class="left">
+                    <figure>
+                        <img src="photos/stock1.jpg" class="home" alt="Stock photo">
                         <figcaption>Current Graph </figcaption>
-                         </figure>
-                        <h2 class="heading-2">
-                            Ahead of Market: 12 things that will decide stock action on Tuesday.</h2>
-                    </div>
-                      <div class="right">
-                                <h3 class="heading-3">Latest News</h3>
-                                <div class="lists">
-                                    <div class="list">
-                                        <img src="photos/stock2.jpg" alt="photo 1">
-                                        <p><b>Stock market update: Nifty Pharma index falls 1.75%</b>
-                                        </p>
-                                        </div>
-                                    <div class="list">
-                                            <img src="photos/stock3.jpg" alt="photo 2">
-                                            <p><b>Stock market update: Stocks that hit 52-week lows on NSE in today's trade</b></p>
-                                          </div>
-                                                   <div class="list">
-                                            <img src="photos/stock4.jpg" alt="photo 3">
-                                            <p><b>Sensex falls! But these stocks rallied over 15% on BSE in today's trade</b></p>
-                                          </div>
-                                          <div class="list">
-                                            <img src="photos/stock5.jpg" alt="photo 4">
-                                            <p><b>Power stocks dows as market falls</b></p>
-                                          </div>
-                              
-
-                                    </div>
-                                </div>
-
-                            </div>
-                <article>
-                                <p>Gaurav Ratnaparkhi, Head of Technical Research at Sharekhan said that the hourly momentum indicator has been pushed into the oversold zone and has developed a positive divergence. "Unless Monday's low of 17,280 breaks, Nifty50 can attempt a bounce to test its key hourly moving averages near 17,700," he said.</p>
-                            <p>Mazhar Mohammad of Chartviewindia.in said Nifty50 seems to be nearing its critical support levels, which are placed in the 17,150–17,000 range. "The last 22 trading sessions of fall from the highs of 18,604 levels seems to have carved out a descending channel, which will be confirmed if Nifty50 manages to defend 17,280-level on a closing basis on Tuesday,” he said.</p>
-                            <p>MUMBAI: Nifty50 formed a large bearish candle on the daily chart on Monday as the market succumbed to losses for the fourth successive session and failed to sustain above the 50-day moving average.</p>
-                            </article>
+                    </figure>
+                    <h2 class="heading-2">
+                        Ahead of Market: 12 things that will decide stock action on Tuesday.</h2>
                 </div>
+                <div class="right">
+                    <h3 class="heading-3">Latest News</h3>
+                    <div class="lists">
+                        <div class="list">
+                            <img src="photos/stock2.jpg" alt="photo 1">
+                            <p><b>Stock market update: Nifty Pharma index falls 1.75%</b>
+                            </p>
+                        </div>
+                        <div class="list">
+                            <img src="photos/stock3.jpg" alt="photo 2">
+                            <p><b>Stock market update: Stocks that hit 52-week lows on NSE in today's trade</b></p>
+                        </div>
+                        <div class="list">
+                            <img src="photos/stock4.jpg" alt="photo 3">
+                            <p><b>Sensex falls! But these stocks rallied over 15% on BSE in today's trade</b></p>
+                        </div>
+                        <div class="list">
+                            <img src="photos/stock5.jpg" alt="photo 4">
+                            <p><b>Power stocks dows as market falls</b></p>
+                        </div>
+
+
                     </div>
-                    <blockquote>Mazhar Mohammad of Chartviewindia.in said Nifty50 seems to be nearing its critical support levels, which are placed in the 17,150–17,000 range.</blockquote>
-                <div class="cards">
-                    <div class ="card">
-                        <h4 class="heading-4">Nifty Pharma index falls 1.75%</h4>
-                        <ul style="margin-left: 10px;">
-                            <li>NEW DELHI: Nifty50 on Monday could not sustain 50-day EMA and saw heavy selling pressure.
-                            <ul style="margin-left: 35px;">
-                                <li>In the process, it declined for the fourth straight session and formed a large bearish candle on the daily chart.</li>
-                            </ul>
-                            </li>
-                            <li>
-                                Analysts said the index has support at 17,280 level and at its 100-day moving average, which is placed around 17,150 level.
-                                <ul style="margin-left: 35px;">
-                                    <li>They see the 17,500 level as the immediate resistance level for the index</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                    <h4 class="heading-4">Power stocks dows as market falls</h4>
-                    <ul style="margin-left: 10px;">
-                        <li>Domestic benchmark index NSE Nifty ended 348.25 points down at 17416.55
-                        <ul style="margin-left: 35px;">
-                            <li>BSE Sensex closed 1170.12 points down at 58465.89. </li>
-                        </ul>
-                        </li>
-                        <li>
-                            On the other hand, D K Enterprises Global Ltd., Dhunseri Invst, Lakshmi Finance, Kotyark Industries Ltd. and Bharti Airtel(PP)
-                            <ul style="margin-left: 35px;">
-                                <li>They see the 17,500 level as the immediate resistance level for the index</li>
-                            </ul>
-                        </li>
+                </div>
+
+            </div>
+            <article>
+                <p>Gaurav Ratnaparkhi, Head of Technical Research at Sharekhan said that the hourly momentum indicator
+                    has been pushed into the oversold zone and has developed a positive divergence. "Unless Monday's low
+                    of 17,280 breaks, Nifty50 can attempt a bounce to test its key hourly moving averages near 17,700,"
+                    he said.</p>
+                <p>Mazhar Mohammad of Chartviewindia.in said Nifty50 seems to be nearing its critical support levels,
+                    which are placed in the 17,150–17,000 range. "The last 22 trading sessions of fall from the highs of
+                    18,604 levels seems to have carved out a descending channel, which will be confirmed if Nifty50
+                    manages to defend 17,280-level on a closing basis on Tuesday,” he said.</p>
+                <p>MUMBAI: Nifty50 formed a large bearish candle on the daily chart on Monday as the market succumbed to
+                    losses for the fourth successive session and failed to sustain above the 50-day moving average.</p>
+            </article>
+        </div>
+    </div>
+    <blockquote>Mazhar Mohammad of Chartviewindia.in said Nifty50 seems to be nearing its critical support levels, which
+        are placed in the 17,150–17,000 range.</blockquote>
+    <div class="cards">
+        <div class="card">
+            
+            <h4 class="heading-4">Nifty Pharma index falls 1.75%</h4>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+    $("li").hide(1000);
+  });
+  $("#show").click(function(){
+    $("li").show();
+  });
+});
+
+</script>
+
+            <ul style="margin-left: 10px;">
+                <li>NEW DELHI: Nifty50 on Monday could not sustain 50-day EMA and saw heavy selling pressure.
+                    <ul style="margin-left: 35px;">
+                        <li>In the process, it declined for the fourth straight session and formed a large bearish
+                            candle on the daily chart.</li>
                     </ul>
+                </li>
+                <li>
+                    Analysts said the index has support at 17,280 level and at its 100-day moving average, which is
+                    placed around 17,150 level.
+                    <ul style="margin-left: 35px;">
+                        <li>They see the 17,500 level as the immediate resistance level for the index</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="card">
+            <h4 class="heading-4">Power stocks dows as market falls</h4>
+            <ul style="margin-left: 10px;">
+                <li>Domestic benchmark index NSE Nifty ended 348.25 points down at 17416.55
+                    <ul style="margin-left: 35px;">
+                        <li>BSE Sensex closed 1170.12 points down at 58465.89. </li>
+                    </ul>
+                </li>
+                <li>
+                    On the other hand, D K Enterprises Global Ltd., Dhunseri Invst, Lakshmi Finance, Kotyark Industries
+                    Ltd. and Bharti Airtel(PP)
+                    <ul style="margin-left: 35px;">
+                        <li>They see the 17,500 level as the immediate resistance level for the index</li>
+                    </ul>
+                </li>
+            </ul>
 
-                </div>
-                <div class="card">
-                    <h4 class="heading-4">Stocks that hit 52-week lows on NSE in today's trade</h4>
-                    <ul style="margin-left: 10px;">
-                        <li>Domestic benchmark index NSE Nifty ended 348.25 points down at 17416.55
-                        <ul style="margin-left: 35px;">
-                            <li>BSE Sensex closed 1170.12 points down at 58465.89. </li>
-                        </ul>
-                        </li>
-                        <li>
-                            On the other hand, D K Enterprises Global Ltd., Dhunseri Invst, Lakshmi Finance, Kotyark Industries Ltd. and Bharti Airtel(PP)
-                            <ul style="margin-left: 35px;">
-                                <li>They see the 17,500 level as the immediate resistance level for the index</li>
-                            </ul>
-                        </li>
-                    </ul>  
-</div>
-</div>
+        </div>
+        <div class="card">
+            <h4 class="heading-4">Stocks that hit 52-week lows on NSE in today's trade</h4>
+            <ul style="margin-left: 10px;">
+                <li>Domestic benchmark index NSE Nifty ended 348.25 points down at 17416.55
+                    <ul style="margin-left: 35px;">
+                        <li>BSE Sensex closed 1170.12 points down at 58465.89. </li>
+                    </ul>
+                </li>
+                <li>
+                    On the other hand, D K Enterprises Global Ltd., Dhunseri Invst, Lakshmi Finance, Kotyark Industries
+                    Ltd. and Bharti Airtel(PP)
+                    <ul style="margin-left: 35px;">
+                        <li>They see the 17,500 level as the immediate resistance level for the index</li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+    
+    <button id="hide">Hide</button>
+<button id="show">Show</button>
 
-<footer>
-    <div class="footer-content" style="top: -900px;">
-        <h3>Stock Market</h3>
-        <p>Get the latest news about <i>Stock Market</i></p>
-        <ul class="socials">
-            <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="mailto: abc@example.com"><i class="fab fa-google-plus-g"></i></a></li>
-            <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
-            <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-        </ul>
-    </div>
-    <div class="footer-bottom">
-        <address>copyright &copy;2021  designed by <span><abbr title="Fakulteti i Inxhinierise Elektrike dhe Kompjuterike">FIEK</span></abbr></address>
-    </div>
-</footer>  
-    </body>
+    <footer>
+        <div class="footer-content" style="top: -900px;">
+            <h3>Stock Market</h3>
+            <p>Get the latest news about <i>Stock Market</i></p>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="mailto: abc@example.com"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <address>copyright &copy;2021 designed by <span><abbr
+                        title="Fakulteti i Inxhinierise Elektrike dhe Kompjuterike">FIEK</span></abbr></address>
+        </div>
+    </footer>
+</body>
+
 </html>
-

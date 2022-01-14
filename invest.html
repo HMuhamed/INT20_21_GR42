@@ -1,106 +1,127 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewpoint" content="width=device-width ,initial-scale=1.0">
-        <title>Invest</title>
-        <link rel="stylesheet" href="style2.css">
-        <link href="https://fonts.google.com/ family=Roboto:wght@400; 700&display swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    </head>
-    <body>
-        <div class='navbar'>
-            <div class='logo'>
-            
-               <h1 class="title-heading" id="stock_id">STOCK MARKET</h1> 
-    
-            </div>
-            <div class='icon-bar'>
-                <a href="home.html"><i class="fas fa-home">
+
+<head>
+    <meta name="viewpoint" content="width=device-width ,initial-scale=1.0">
+    <title>Invest</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.google.com/ family=Roboto:wght@400; 700&display swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class='navbar'>
+        <div class='logo'>
+
+            <h1 class="title-heading" id="stock_id">STOCK MARKET</h1>
+
+        </div>
+        <div class='icon-bar'>
+            <a href="home.html"><i class="fas fa-home">
                     <div class="menu-items">
                         Home
-    
+
                     </div>
                 </i>
-                </a>
-                <a href="news.html"><i class="fas fa-mail-bulk">
+            </a>
+            <a href="news.html"><i class="fas fa-mail-bulk">
                     <div class="menu-items">
                         Market News
-    
+
                     </div>
                 </i>
-                </a>
-                <a href="invest.html"><i class="fas fa-business-time">
+            </a>
+            <a href="invest.html"><i class="fas fa-business-time">
                     <div class="menu-items">
                         Invest
-    
+
                     </div>
                 </i>
-                </a>
-                <a href="loginform.html"><i class="fas fa-user-plus">
+            </a>
+            <a href="loginform.html"><i class="fas fa-user-plus">
                     <div class="menu-items">
                         Log In
-    
+
                     </div>
                 </i>
-                </a>
-                <a href="index.html"><i class="fas fa-info">
+            </a>
+            <a href="index.html"><i class="fas fa-info">
                     <div class="menu-items">
                         About Us
-    
+
                     </div>
                 </i>
-                </a>
-                <canvas id="myCanvas"></canvas>
-                
-                <script>
+            </a>
+            <canvas id="myCanvas"></canvas>
+
+            <script>
                 var c = document.getElementById("myCanvas");
                 var ctx = c.getContext("2d");
                 ctx.fillStyle = "darkblue";
                 ctx.fillRect(20, 20, 75, 50);
-                
+
                 //Turn transparency on
                 ctx.globalAlpha = 0.2;
-                ctx.fillStyle = "neonblue"; 
-                ctx.fillRect(50, 50, 75, 50); 
-                ctx.fillStyle = "mediumblue"; 
+                ctx.fillStyle = "neonblue";
+                ctx.fillRect(50, 50, 75, 50);
+                ctx.fillStyle = "mediumblue";
                 ctx.fillRect(80, 80, 75, 50);
-                </script>
-    
-                
-            </div>
-    
+            </script>
+
+
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1>Invest</h1>
-                    <ul style="list-style-type:square; margin-left: 25px;">
-                        <li>Build your own investment strategy</li>
-                        <li> Diversify your portfolio with our broad range of options.</li>
-                    
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Invest</h1>
+                <ul style="list-style-type:square; margin-left: 25px;">
+                    <li>Build your own investment strategy</li>
+                    <li> Diversify your portfolio with our broad range of options.</li>
+
                     <li>
-                    <p id="demo"></p></li></ul>
+                        <p id="demo"></p>
+                    </li>
+                </ul>
 
-<script>
-const coins = [
-  "Bitcoin",
-  "Ethereum",
-  "Solana",
-  "Shiba Inu"
-  
-]; 
-document.getElementById("demo").innerHTML = coins;
-</script>
+                <script>
+                    const coins = [
+                        "Bitcoin",
+                        "Ethereum",
+                        "Solana",
+                        "Shiba Inu"
 
-                    <button type="button">Start Now</button>
-                </div>
-                <div class="video1">
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/2zCHOWzzFcc" ></iframe>
-                </div>
-                <div class="video2">
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/6zTsnms94Fs" ></iframe>
-                </div>
-                <div class="col">
+                    ];
+                    document.getElementById("demo").innerHTML = coins;
+                </script>
+               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+               <script>
+               $(document).ready(function(){
+                 $("button").focus(function(){
+                   $("span").css("display", "inline").fadeOut(2000);
+                 });
+               });
+               </script>
+               <style>
+               span {
+                 display: none;
+                 color: white;
+                 margin-left: 10px;
+               }
+               </style>
+
+                <button type="button">Start Now</button><br><br>
+                <span>Please wait page is loading...</span>
+            </div>
+            <div class="video1">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/2zCHOWzzFcc"></iframe>
+            </div>
+            <div class="video2">
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/6zTsnms94Fs"></iframe>
+            </div>
+            <div class="col">
                 <div class="card card1">
                     <h4>Bitcoin</h4>
                     <p>Invest in Bitcoin</p>
@@ -117,10 +138,10 @@ document.getElementById("demo").innerHTML = coins;
                     <h4>Shiba Inu</h4>
                     <p>Invest in Shiba Inu</p>
                 </div>
-                </div>
             </div>
         </div>
-        
+    </div>
+
     <footer>
         <div class="footer-content" style="top: -900px;">
             <h3>Stock Market</h3>
@@ -134,8 +155,10 @@ document.getElementById("demo").innerHTML = coins;
             </ul>
         </div>
         <div class="footer-bottom">
-            <address>copyright &copy;2021  designed by <span><abbr title="Fakulteti i Inxhinierise Elektrike dhe Kompjuterike">FIEK</span></abbr></address>
+            <address>copyright &copy;2021 designed by <span><abbr
+                        title="Fakulteti i Inxhinierise Elektrike dhe Kompjuterike">FIEK</span></abbr></address>
         </div>
-    </footer> 
-    </body>
+    </footer>
+</body>
+
 </html>
