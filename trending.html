@@ -17,7 +17,7 @@ $(document).ready(function(){
 </script>
 <script>
     $(document).ready(function(){
-      $("button").click(function(){
+      $(".btn1").click(function(){
         $(".like").hide(1000);
         alert("Thank you for your review");
       });
@@ -25,11 +25,47 @@ $(document).ready(function(){
     </script>
     <script> 
         $(document).ready(function(){
-          $("button").click(function(){
+          $(".btn1").click(function(){
             $("div").animate({left: '250px'});
           });
         });
         </script> 
+        <script>
+            $(document).ready(function(){
+              $("#btn4").click(function(){
+                alert("Text: " + $("#word1").text());
+              });
+              $("#btn5").click(function(){
+                alert("HTML: " + $("#word2").html());
+              });
+            });
+            </script>
+            <script>
+                $(document).ready(function(){
+                  $("#btn4").click(function(){
+                    $("#word1").text("WE");
+                  });
+                  $("#btn5").click(function(){
+                    $("#word2").html("<b>ARE LEARNING</b>");
+                  });
+                  $("#btn6").click(function(){
+                    $("#word3").val("STOCKS");
+                  });
+                });
+                </script>
+               
+                    <script>
+                        $(document).ready(function(){
+                          $("#btn9").click(function(){
+                            $(".Anim").remove();
+                          });
+                        });
+                        </script>
+                        <script>
+                            $(document).ready(function(){
+                              $(".like").add("#word1").add("#word2").add("#word3").css("background-color", "lightgrey");
+                            });
+                            </script>
 
     <style>
         body
@@ -204,23 +240,49 @@ $(document).ready(function(){
   
 }
 .like{
-    margin-left: 30px;
+    
     margin-top: 50px;
+    height: 40px;
+    padding-top: 10px;
+    font-size: 17px;
+    font-family:'Times New Roman', Times, serif;
 }
 .btn1{
-    margin-left: 30px;
-    margin-top: 10px;
+   
+    background-color: lightgrey; 
+    border: black 1px solid;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        color: black;
+        height: 38px;
+   
 }
 .btn2{
-    
-    margin-top: 10px;
+    background-color: lightgrey; 
+    border: black 1px solid;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        color: black;
+        height: 38px;
 }
 footer{
     position: absolute;
     background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
     height: auto;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 150px;
     font-family: "Open Sans";
     padding-top: 40px;
     color: #fff;}
@@ -281,6 +343,39 @@ footer{
     text-transform: uppercase;
     opacity: .4;
     font-weight: 200;}
+
+
+    .button-class
+    {
+        background-color: lightgrey; 
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        color: black;
+        
+    }
+
+
+    .btn-cls
+    {
+        background-color: lightgrey; 
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        color: black;
+    }
     
 
 </style>
@@ -524,20 +619,38 @@ new Chart("myChart", {
        //date()
        const d = new Date(2021, 11, 27, 10, 33, 30, 0);
        document.getElementById("date_id").innerHTML = d;
+    </script> 
 
-
-  
-    </script>
-
-<p class ="like">Do you like this page ? Give it a like if so!!</p>
-<div style="background:#1e87b8;margin-top: 5px;height:60px;width:500px;position:absolute;"><p>Review:</p><button class="btn1">like</button><button class="btn2">dislike</button></div>
-
+    <!-- set -->
+    <div  style="text-align: center;margin-top: 20px;">
+    <p id="word1">What</p>
+    <p id="word2">Is</p>
+    </div>
+    
+    <div style="margin-left: 500px;margin-top: 10px;">
+    <p> <input  style="width: 250px;text-align: center;margin-left: 50px;
+        padding: 0 5px;
+        height: 20px;
+        font-size: 16px;
+        border: none;
+        background: none;
+        outline: none;" type="text" id="word3" value="Unknown";></p>
+    
+    <button class="button-class" id="btn4">Set Text</button>
+    <button class="button-class" id="btn5">Set HTML</button>
+    <button  class="button-class" id="btn6">Set Value</button>
+</div>
+    
+<div style="text-align: center;">
+<p class ="like">Do you like this page ? Give it a like if so!!</p><button class="btn-cls" id ="btn9">Remove the review</button>
+<div class ="Anim" style="padding-top: 6px;margin-left: 300px;background:lightgrey;margin-top: 5px;height:80px;width:700px;position:absolute;"><p>Review:</p><button class="btn1">Like</button><button class="btn2">Dislike</button></div>
+</div>
 </body>
 </html>
 
 
  <footer>
-    <div class="footer-content" style="top: -900px;">
+    <div class="footer-content" style="top: -500px;">
         <h3>Stock Market</h3>
         <p>Get the latest news about <i><a href="#stock_id" style="text-decoration: none;">Stock Market</a></i></p>
         <ul class="socials">
